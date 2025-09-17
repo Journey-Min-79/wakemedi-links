@@ -4,36 +4,41 @@
   <meta charset="UTF-8" />
   <title>WakeMedi Share</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // 현재 URL의 쿼리스트링에서 data 추출
       const params = new URLSearchParams(window.location.search);
-      const data = params.get("data");
+      const data = params.get("data") || "";
 
-      // 앱 커스텀 스킴 (앱에 연결될 주소)
-      const appUrl = `wakemedi://share?data=${encodeURIComponent(data || "")}`;
+      // 1. App Link URL (https)
+      const appLinkUrl = `https://journey-min-79.github.io/wakemedi-links/share?data=${encodeURIComponent(data)}`;
 
-      // 앱스토어 / 플레이스토어 fallback URL
+      // 2. Custom Scheme URL
+      const schemeUrl = `wakemedi://share?data=${encodeURIComponent(data)}`;
+
+      // 3. 스토어 fallback
       const playStoreUrl = "https://play.google.com/store/apps/details?id=com.example.wakemedi";
-      const appStoreUrl = "https://apps.apple.com/app/idYOUR_APP_ID"; // 🔹 실제 iOS App ID 넣기
-
-      // 디바이스 확인
+      const appStoreUrl = "https://apps.apple.com/app/idYOUR_APP_ID";
       const ua = navigator.userAgent || navigator.vendor || window.opera;
       let fallbackUrl = playStoreUrl;
       if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
         fallbackUrl = appStoreUrl;
       }
 
-      // 앱 실행 시도 → 실패하면 fallback
-      const iframe = document.createElement("iframe");
-      iframe.style.display = "none";
-      iframe.src = appUrl;
-      document.body.appendChild(iframe);
+      // 앱 실행 시도 → 우선 스킴
+      window.location.href = schemeUrl;
 
+      // 앱이 열렸는지 감지
+      let hidden = false;
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) hidden = true; // 앱으로 전환됨
+      });
+
+      // 2초 뒤 앱이 안 열렸으면 → 스토어로
       setTimeout(() => {
-        window.location.href = fallbackUrl;
-      }, 2000);
+        if (!hidden) {
+          window.location.href = fallbackUrl;
+        }
+      }, 3000);
     });
   </script>
 </head>
@@ -41,10 +46,8 @@
   <h2>WakeMedi 공유 링크</h2>
   <p>앱으로 이동 중입니다...</p>
   <p>자동으로 열리지 않으면 <a id="manualLink">여기</a>를 눌러주세요.</p>
-
   <script>
-    // 수동 클릭용 링크
-    document.getElementById("manualLink").href = window.location.href;
+    document.getElementById("manualLink").href = "wakemedi://share?data=" + encodeURIComponent(new URLSearchParams(window.location.search).get("data") || "");
   </script>
 </body>
 </html>
