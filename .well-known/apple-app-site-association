@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "ABCDE12345.com.example.wakemedi",
+        "appID": "ABCDE12345.com.journeymin.wakemedi",
         "paths": [ "/share/*" ]
       }
     ]
