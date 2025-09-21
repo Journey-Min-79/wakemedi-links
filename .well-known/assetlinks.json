@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.example.wakemedi", 
+    "package_name": "com.journeymin.wakemedi", 
     "sha256_cert_fingerprints": [
       "12:34:56:AB:CD:EF:..." 
     ]
