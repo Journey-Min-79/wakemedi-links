@@ -5,7 +5,8 @@
     "contents": "공지사항 내용",
     "date": "2026-01-01",
     "popup": "Y",
-    "imageUrl": "https://cdn.forbeskorea.co.kr/news/photo/201501/20150129_1_304852.jpg"
+    "imageUrl": "https://cdn.forbeskorea.co.kr/news/photo/201501/20150129_1_304852.jpg",
+    "externalLink": ""
   },
   {
     "no": 2,
@@ -13,6 +14,7 @@
     "contents": "공지사항 내용2",
     "date": "2026-01-02",
     "popup": "N",
-    "imageUrl": "https://cdn.forbeskorea.co.kr/news/photo/201501/20150129_1_304852.jpg"
+    "imageUrl": "https://cdn.forbeskorea.co.kr/news/photo/201501/20150129_1_304852.jpg",
+    "externalLink": ""
   }
 ]
