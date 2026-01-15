@@ -6,7 +6,7 @@
     "date": "2026-01-01",
     "popup": "Y",
     "imageUrl": "https://cdn.forbeskorea.co.kr/news/photo/201501/20150129_1_304852.jpg",
-    "externalLink": ""
+    "externalLink": "https://www.naver.com"
   },
   {
     "no": 2,
@@ -15,6 +15,6 @@
     "date": "2026-01-02",
     "popup": "N",
     "imageUrl": "https://cdn.forbeskorea.co.kr/news/photo/201501/20150129_1_304852.jpg",
-    "externalLink": ""
+    "externalLink": "https://www.google.com"
   }
 ]
