@@ -1,0 +1,11 @@
+[
+  {
+    "no": 1,
+    "name": "Lancement de l’app d’alertes intelligente !",
+    "contents": "Bonjour.\nNous avons lancé WakeMedi, une application qui vous permet de gérer à la fois le réveil du matin, les rappels de prise de médicaments et les notifications Wake‑up Call qui s’affichent comme un vrai appel.\n\nWakeMedi n’est pas qu’une simple appli d’alarme : elle vous aide à démarrer votre routine quotidienne plus facilement et plus agréablement.\n\nFonctionnalités principales\n⏰ Réveil intelligent : réglages variés et sonneries pour un réveil efficace\n💊 Rappels de médicaments : ne manquez plus vos prises\n📞 Wake‑up Call : notifications spéciales qui apparaissent comme un vrai appel entrant\n\nRéglez votre nom/profil pour une expérience plus réaliste\n\nEnregistrez votre propre voix et utilisez‑la comme son d’alerte\n🔗 Partage : partagez des alarmes avec vos proches pour vous entraider\n🔒 Confidentialité : données stockées sur l’appareil (pas d’envoi serveur)\n\nEssayez WakeMedi et dites‑nous vos idées ou problèmes.\nNous améliorons WakeMedi en continu grâce à vos retours.\nPour toute demande/suggestion, envoyez un e‑mail via Paramètres > Support.\n\nMerci.",
+    "date": "2026-01-01",
+    "popup": "N",
+    "imageUrl": "",
+    "externalLink": ""
+  }
+]
