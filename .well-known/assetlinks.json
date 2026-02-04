@@ -1,11 +1,15 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.journeymin.wakemedi", 
-    "sha256_cert_fingerprints": [
-      "12:34:56:AB:CD:EF:..." 
-    ]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.journeymin.wakemedi",
+      "sha256_cert_fingerprints": [
+        "71:E2:D6:04:EC:94:FF:49:47:55:A7:E9:F2:78:CD:47:F4:31:D6:24:7A:B1:A7:59:D6:0D:85:23:C0:04:82:F7"
+      ]
+    }
   }
-}]
-
+]
